@@ -86,10 +86,17 @@ INVALID_INGREDIENTS = {
     "detergent", "soap", "shampoo", "bleach", "cleaner", "chemical",
     "poison", "toxic", "waste", "garbage", "trash", "refuse",
 
-    # Body parts and bodily fluids
+    # Body parts and bodily fluids (EXPAND THIS SECTION)
     "finger", "toe", "hand", "foot", "arm", "leg", "head", "hair",
     "nail", "tooth", "teeth", "bone", "skin", "blood", "urine", "feces",
     "saliva", "mucus", "vomit", "puke", "snot", "booger",
+
+    # ANATOMICAL TERMS:
+    "penis", "vagina", "vulva", "clitoris", "testicle", "testicles",
+    "scrotum", "breast", "breasts", "nipple", "nipples", "anus",
+    "rectum", "genitals", "genital", "groin", "buttocks", "butt",
+    "pubic", "foreskin", "labia", "ovary", "ovaries", "uterus",
+    "prostate", "semen", "sperm", "ejaculate", "menstrual", "period",
 
     # Profanity and inappropriate language (comprehensive list)
     "shit", "piss", "fuck", "cunt", "cock", "dick", "pussy", "ass", "asshole",
@@ -465,6 +472,7 @@ CRITICAL RULES - FOLLOW EXACTLY:
 3. You cannot suggest substitutions or additional ingredients
 4. If you cannot create a complete recipe with ONLY these ingredients, you must create the best possible dish using what's available
 5. Do not mention any ingredients not in the provided list
+6. If any ingredient seems inappropriate, non-food, or anatomical, respond with 'Invalid Ingredients' instead of a recipe.
 
 Create a {state.meal_type} recipe from {state.cuisine} cuisine that can be completed in {state.time} minutes using EXCLUSIVELY the ingredients listed above.{dietary_text}
 
@@ -755,6 +763,8 @@ CRITICAL RULES - FOLLOW EXACTLY:
 2. You cannot add ANY other ingredients, not even salt, pepper, oil, or water unless they are in the list above
 3. You cannot suggest substitutions or additional ingredients
 4. If you cannot create a complete recipe with ONLY these ingredients, you must create the best possible dish using what's available
+5. If any ingredient seems inappropriate, non-food, or anatomical, respond with 'Invalid Ingredients' instead of a recipe.
+
 
 Create a {meal_type} recipe from {cuisine} cuisine that can be completed in {time} minutes using EXCLUSIVELY the ingredients listed above.{dietary_text}
 
